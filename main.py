@@ -14,6 +14,12 @@ def cats():
     return render_template("cats.html", cat_name=cat_name)
 
 
+@app.route("/f/")
+def f_view():
+    f = Flat.query.all()
+    return render_template("index.html", f=f)
+
+
 @app.route("/flats/")
 def flats_view():
     flats = Flat.query.all()
@@ -22,8 +28,8 @@ def flats_view():
 
 @app.route("/flat/<flat_id>")
 def flat_view(flat_id):
-    flat = Flat.query.get(id=flat_id)
-    return render_template("flat.html", flat=flat)
+    flat = Flat.query.get(int(flat_id))
+    return render_template("flats.html", flat=flat)
 
 
 @app.route("/info/<name>/<age>")

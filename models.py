@@ -26,3 +26,4 @@ class Flat(db.Model):
     rooms: str = db.Column(db.String(50),  unique=False)
     price: int = db.Column(db.String(10), unique=False)
     area: str = db.Column(db.String(50), unique=False)
+    img: str = db.Column(db.String(50), unique=True)

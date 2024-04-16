@@ -225,8 +225,20 @@
         </td>
     <tr>
 </table>
+<div class="container-xl">
+    <div class="row">
+        {% for flat in flats %}
+            <div class="col-xl">
+                <h1>{{ flat.city }}</h1>
+                <p>Количество комнат - {{ flat.rooms }}</p>
+                <p>Цена - {{ flat.price }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% for flat in flats %}
     <h1>{{ flat.price }}</h1>
-    <p>Количество комнат {{ flat.rooms_num }}</p>
+    <p>Количество комнат {{ flat.rooms }}</p>
 {% endfor %}
+
 {% endblock %}
