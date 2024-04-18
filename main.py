@@ -44,4 +44,4 @@ def random(a, b):
     return str(r)
 
 
-app.run(debug=True)
+app.run(host="0.0.0.0", debug=True)
